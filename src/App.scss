@@ -1,0 +1,233 @@
+@import 'lib/normalize.css';
+@import 'lib/_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Sen:wght@400;700;800&display=swap');
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: $black;
+  color: $white;
+}
+
+.menu-container {
+  width: 1040px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: 80px;
+  background-color: $accent;
+}
+
+.menu {
+  font-family: 'Sen', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  li {
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.input-wrapper input {
+  max-width: 700px;
+  width: 100%;
+  background-color: $black;
+  padding: 5px;
+  border-radius: 15px;
+  border: 2px solid $accent;
+  color: $white;
+  font-size: 16px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75.52%, #000000 91.67%), url("./lib/assets/images/header-background.png");
+  background-size: cover;
+  height: 1000px;
+  width: 100%;
+  margin-top: -150px;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar {
+  width: 700px;
+  .input-wrapper input{
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+  }
+}
+
+.popular {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: -150px;
+}
+
+.moviecards {
+  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+
+.movie-card {
+  width: 160px;
+  height: 240px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.community{
+  background: url("./lib/assets/images/community_bg.png") no-repeat;
+  background-size: cover;
+  height: 340px;
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.community h2 {
+  font-family: Sen, sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+
+.community p {
+  font-family: Sen, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  max-width: 800px;
+}
+
+.community .btn {
+  border: 2px solid #FFFFFF;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  margin-top: 10px;
+  transition: all 0.2s linear 0.2s;
+  &:hover {
+    background-color: white;
+    color: $accent;
+  }
+}
+
+.recents {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.minicards {
+  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+
+.mini-card {
+  width: 100px;
+  height: 150px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.trailers {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.trailercards {
+  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+
+.trailer-card {
+  width: 310px;
+  height: 180px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  h4 {
+    font-family: Sen, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 5px;
+  }
+}
+
+footer {
+  margin-top: 100px;
+  background-color: $gray;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  .footer {
+    width: 1040px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-areas: "menu menu social"
+    "copyright . .";
+    .menu {
+      grid-area: menu;
+      align-self: end;
+    }
+    .socialmedia {
+      grid-area: social;
+      justify-self: center;
+      align-self: end;
+      a {
+        margin-left: 20px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    .copyright {
+      grid-area: copyright;
+      font-family: Sen, sans-serif;
+      font-weight: normal;
+      font-size: 12px;
+    }
+  }
+}
