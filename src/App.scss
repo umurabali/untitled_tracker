@@ -9,6 +9,7 @@
 body {
   background-color: $black;
   color: $white;
+  font-family: Sen, sans-serif;
 }
 
 .menu-container {
@@ -82,22 +83,20 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: -150px;
-}
-
-.moviecards {
-  width: 960px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: center;
-  justify-items: center;
-}
-
-.movie-card {
-  width: 160px;
-  height: 240px;
-  img {
-    width: 100%;
-    height: 100%;
+  .moviecards {
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    justify-items: center;
+    .movie-card {
+      width: 160px;
+      height: 240px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -111,20 +110,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.community h2 {
-  font-family: Sen, sans-serif;
-  font-weight: bold;
-  font-size: 48px;
-  margin-bottom: 5px;
-}
-
-.community p {
-  font-family: Sen, sans-serif;
-  font-weight: normal;
-  font-size: 12px;
-  max-width: 800px;
+  h2 {
+    font-family: Sen, sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 5px;
+  }
+  p {
+    font-family: Sen, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    max-width: 800px;
+  }
 }
 
 .community .btn {
@@ -144,22 +141,20 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 100px;
-}
-
-.minicards {
-  width: 960px;
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  justify-content: center;
-  justify-items: center;
-}
-
-.mini-card {
-  width: 100px;
-  height: 150px;
-  img {
-    width: 100%;
-    height: 100%;
+  .minicards {
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    justify-content: center;
+    justify-items: center;
+    .mini-card {
+      width: 100px;
+      height: 150px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -176,23 +171,24 @@ body {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   justify-items: center;
+  .trailer-card {
+    width: 310px;
+    height: 180px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    h4 {
+      font-family: Sen, sans-serif;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 5px;
+    }
+  }
 }
 
-.trailer-card {
-  width: 310px;
-  height: 180px;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  h4 {
-    font-family: Sen, sans-serif;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    margin-top: 5px;
-  }
-}
+
 
 footer {
   margin-top: 100px;
@@ -228,6 +224,94 @@ footer {
       font-family: Sen, sans-serif;
       font-weight: normal;
       font-size: 12px;
+    }
+  }
+}
+
+.moviespopular {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  h3 {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .moviecards {
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    justify-items: center;
+    .movie-card {
+      width: 180px;
+      height: 270px;
+    }
+  }
+}
+
+.alltimepopular {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  h3 {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .minicards {
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    justify-items: center;
+    row-gap: 10px;
+    .mini-card {
+      width: 120px;
+      height: 180px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.section-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  .filter {
+    width: 1040px;
+    h3 {
+      float: left;
+      margin-right: 20px;
+      font-size: 18px;
+    }
+    ul {
+      color:$white;
+      background:$dark-gray;
+      border-radius:6px;
+      float: left;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      li {
+        float:left;
+        font-size:12px;
+        text-transform:uppercase;
+        letter-spacing:.075em;
+        list-style: none;
+        padding: 6px 20px;
+        cursor: pointer !important;
+        transition: all 0.1s linear 0.1s;
+      &:hover {
+        background-color: $gray;
+      }
+        :hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
