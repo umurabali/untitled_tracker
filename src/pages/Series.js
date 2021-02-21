@@ -46,6 +46,7 @@ export const Series = () => {
 
             <div className="moviespopular">
                 <h3>POPULAR SERIES THIS WEEK</h3>
+                <div className="line"></div>
                 <div className="moviecards">
                     <MovieCard/>
                     <MovieCard/>
@@ -57,6 +58,7 @@ export const Series = () => {
 
             <div className="alltimepopular">
                 <h3>ALL TIME POPULAR</h3>
+                <div className="line"></div>
                 <div className="minicards">
                     <MiniCard/>
                     <MiniCard/>

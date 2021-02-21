@@ -81,6 +81,7 @@ export const Movies = () => {
 
             <div className="moviespopular">
                 <h3>POPULAR MOVIES THIS WEEK</h3>
+                <div className="line"></div>
                 <div className="moviecards">
                     <MovieCard/>
                     <MovieCard/>
@@ -92,6 +93,7 @@ export const Movies = () => {
 
             <div className="alltimepopular">
                 <h3>ALL TIME POPULAR</h3>
+                <div className="line"></div>
                 <div className="minicards">
                     <MiniCard/>
                     <MiniCard/>

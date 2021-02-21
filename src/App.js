@@ -4,6 +4,8 @@ import {Movies} from './pages/Movies'
 import {Series} from "./pages/Series"
 import {Animes} from "./pages/Animes"
 import {WatchList} from "./pages/WatchList"
+import {Search} from "./pages/Search"
+import {Details} from "./pages/Details"
 
 import {
   BrowserRouter as Router,
@@ -22,6 +24,8 @@ function App() {
         <Route path="/series"> <Series /> </Route> 
         <Route path="/animes"> <Animes /> </Route> 
         <Route path="/watchlist"> <WatchList /> </Route> 
+        <Route path="/search"> <Search /> </Route>
+        <Route path="/details"> <Details /> </Route>
         </Switch>
         
             
