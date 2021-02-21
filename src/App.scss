@@ -587,6 +587,11 @@ footer {
             height: 14px;
             margin-right: 5px;
           }
+          &:hover {
+            background-color: $white;
+            color: $accent;
+            stroke: $accent;
+          }
         }
       }
     }
