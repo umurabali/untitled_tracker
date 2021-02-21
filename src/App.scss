@@ -566,16 +566,23 @@ footer {
         .episodename {
           float: left;
           font-weight: bold;
-          font-size: 14px;
+          font-size: 16px;
         }
         .airdate {
           float: right;
           font-weight: bold;
-          font-size: 14px;
+          font-size: 16px;
         }
         .overview {
           font-size: 12px;
+          line-height: 1.2;
+          margin-top: 5px;
           float: left;
+          text-align: justify;
+        }
+        img {
+          height: 100%;
+          width: 100%;
         }
         .btn {
           background-color: $accent;
