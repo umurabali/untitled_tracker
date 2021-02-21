@@ -92,9 +92,10 @@ body {
     .movie-card {
       width: 160px;
       height: 240px;
-      img {
-        width: 100%;
-        height: 100%;
+      background: url("https://www.themoviedb.org/t/p/w220_and_h330_face/rqeYMLryjcawh2JeRpCVUDXYM5b.jpg");
+      background-size: cover;
+      .data {
+        display: none;
       }
     }
   }
@@ -246,6 +247,29 @@ footer {
     .movie-card {
       width: 180px;
       height: 270px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 0.5) 80.73%, #000000 100%), url("https://www.themoviedb.org/t/p/w220_and_h330_face/rqeYMLryjcawh2JeRpCVUDXYM5b.jpg");
+      background-size: cover;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      .data {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .icon {
+        width: 14px;
+        height: 14px;
+        margin-left: 12px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      span {
+        font-size: 12px;
+        margin-left: 2px;
+      }
     }
   }
 }
@@ -265,7 +289,7 @@ footer {
     grid-template-columns: repeat(7, 1fr);
     justify-content: center;
     justify-items: center;
-    row-gap: 10px;
+    row-gap: 18px;
     .mini-card {
       width: 120px;
       height: 180px;
@@ -293,10 +317,10 @@ footer {
       background:$dark-gray;
       border-radius:6px;
       float: left;
-      overflow: hidden;
       display: flex;
       align-items: center;
       li {
+        border-radius:6px;
         float:left;
         font-size:12px;
         text-transform:uppercase;
@@ -305,11 +329,29 @@ footer {
         padding: 6px 20px;
         cursor: pointer !important;
         transition: all 0.1s linear 0.1s;
+        position: relative;
       &:hover {
         background-color: $gray;
       }
         :hover {
           cursor: pointer;
+        }
+        ul {
+          background-color: $gray;
+          position: absolute;
+          float: left;
+          display: none;
+          left: -10px;
+          z-index: 1;
+          &.filteractive {
+            display: block;
+          }
+          li {
+            font-size: 10px;
+          }
+          li:hover {
+            color: $accent;
+          }
         }
       }
     }

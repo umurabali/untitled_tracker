@@ -17,32 +17,67 @@ export const Movies = () => {
                         <li>
                             <label> YEAR </label>
                             <img src={arrow} alt=""/>
+                            <ul className="filteractive">
+                                <li>All</li>
+                                <li>Upcoming</li>
+                                <li>2020s</li>
+                                <li>2010s</li>
+                                <li>2000s</li>
+                                <li>1990s</li>
+                                <li>1980s</li>
+                                <li>1970s</li>
+                                <li>1960s</li>
+                                <li>1950s</li>
+                                <li>1940s</li>
+                            </ul>
                         </li>
                         <li>
                             <label> RATING </label>
                             <img src={arrow} alt=""/>
+                            <ul className="filteractive">
+                                <li>Highest</li>
+                                <li>Lowest</li>
+                                <li>TOP 250</li>
+                            </ul>
                         </li>
                         <li>
                             <label> POPULAR </label>
                             <img src={arrow} alt=""/>
+                            <ul className="filteractive">
+                                <li>All Time</li>
+                                <li>This Year</li>
+                                <li>This Month</li>
+                                <li>This Week</li>
+                            </ul>
                         </li>
                         <li>
                             <label> GENRE </label>
                             <img src={arrow} alt=""/>
+                            <ul className="filteractive">
+                                <li>Action</li>
+                                <li>Adventure</li>
+                                <li>Animation</li>
+                                <li>Comedy</li>
+                                <li>Crime</li>
+                                <li>Documentary</li>
+                                <li>Drama</li>
+                                <li>Family</li>
+                                <li>Fantasy</li>
+                                <li>History</li>
+                                <li>Horror</li>
+                                <li>Music</li>
+                                <li>Mystery</li>
+                                <li>Romance</li>
+                                <li>Science Fiction</li>
+                                <li>Thriller</li>
+                                <li>TV Movie</li>
+                                <li>War</li>
+                                <li>Western</li>
+                            </ul>
                         </li>
-                        <li>
-                            <label> SERVICE </label>
-                            <img src={arrow} alt=""/>
-                        </li>
-                        <li>
-                            <label> OTHER </label>
-                            <img src={arrow} alt=""/>
-                        </li>
-
                     </ul>
                 </div>
             </section>
-
 
             <div className="moviespopular">
                 <h3>POPULAR MOVIES THIS WEEK</h3>

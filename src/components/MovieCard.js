@@ -1,9 +1,17 @@
 import React from "react";
+import {ReactComponent as Eye} from '../lib/assets/images/eye.svg';
+import {ReactComponent as Hearth} from '../lib/assets/images/hearth.svg';
+import {ReactComponent as Star} from '../lib/assets/images/star.svg';
+
 
 export const MovieCard = () => {
     return (
         <div className="movie-card">
-            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/rqeYMLryjcawh2JeRpCVUDXYM5b.jpg" alt=""/>
+            <div className="data">
+                <Eye className="icon" stroke='white'/> <span>30K</span>
+                <Hearth className="icon" stroke='white'/> <span>4K</span>
+                <Star className="icon" stroke='white'/> <span>4.7</span>
+            </div>
         </div>
     );
 };
