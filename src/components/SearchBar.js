@@ -1,13 +1,14 @@
 import React from 'react';
+import {ReactComponent as Search} from '../lib/assets/images/search.svg';
 
 const SearchBar = ({keyword,setKeyword}) => {
-    const BarStyling = {width:"200px",background:"#000", border:"1px", padding:"0.5rem", borderColor:"#7A4EFD"};
     return (
         <div className="input-wrapper">
             <input
                 type="text"
-                placeholder=""
+                placeholder="SEARCH"
             />
+            <Search className="icon" stroke='white'/>
         </div>
     );
 }

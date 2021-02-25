@@ -9,7 +9,7 @@ export const MovieCard = () => {
         <div className="movie-card">
             <div className="data">
                 <Eye className="icon" stroke='white'/> <span>30K</span>
-                <Hearth className="icon" stroke='white'/> <span>4K</span>
+                <Hearth className="icon nomobile" stroke='white'/> <span className="nomobile">4K</span>
                 <Star className="icon" stroke='white'/> <span>4.7</span>
             </div>
         </div>

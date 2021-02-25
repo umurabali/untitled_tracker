@@ -1,0 +1,188 @@
+@media only screen and (max-width: 600px) {
+  .nomobile {
+    display: none;
+  }
+
+  .menu-container {
+    width: 100vw;
+    .logo {
+      margin: 0 auto;
+    }
+    .menu {
+      display: none;
+    }
+  }
+  .hero {
+    height: 600px;
+    background-size: cover;
+  }
+  .searchbar {
+    padding: 20px;
+  }
+
+  .popular {
+    margin-top: -20px;
+    h3 {
+      margin-left: 20px;
+    }
+    .moviecards {
+      width: 100vw;
+      box-sizing: border-box;
+      padding: 0 20px 0 20px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      .movie-card {
+        min-height: 160px;
+        &:nth-child(even) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .community {
+    padding: 20px;
+    box-sizing: border-box;
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .recents {
+    margin-top: 60px;
+    h3 {
+      margin-left: 20px;
+    }
+    .minicards {
+      width: 100vw;
+      box-sizing: border-box;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0 20px 0 20px;
+      grid-gap: 5px;
+      .mini-card {
+        min-height: 120px;
+        &:nth-child(odd) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .trailers {
+    margin-top: 60px;
+    h3 {
+      margin-left: 20px;
+    }
+    .trailercards {
+      width: 100vw;
+      grid-gap: 10px;
+      box-sizing: border-box;
+      padding: 0 20px 0 20px;
+      .trailer-card {
+        .trailer {
+          height: 50px;
+          .playicon {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        h4 {
+          margin-left: 0;
+          font-size: 10px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: auto;
+    margin-top: 60px;
+    .footer {
+      width: 100vw;
+      box-sizing: border-box;
+      padding: 20px;
+      grid-template-areas: "menu menu menu" "copyright copyright social";
+      row-gap: 30px;
+      align-items: center;
+      .menu {
+        align-self: center;
+        font-size: 10px;
+      }
+      .copyright {
+        font-size: 10px;
+      }
+      .socialmedia {
+        align-self: center;
+        a {
+          margin-left: 5px;
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .line {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .moviespopular {
+    h3 {
+      margin-left: 20px;
+    }
+    .moviecards {
+      width: 100vw;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0 20px 0 20px;
+      box-sizing: border-box;
+      .movie-card {
+        height: 160px;
+        &:nth-child(even) {
+          display: none;
+        }
+        .icon {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .alltimepopular {
+    margin-top: 60px;
+    h3 {
+      margin-left: 20px;
+    }
+    .minicards {
+      width: 100vw;
+      padding: 0 20px 0 20px;
+      box-sizing: border-box;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 9px;
+    }
+  }
+
+  .section-filter {
+    .filter {
+      width: 100vw;
+      padding: 0 20px 0 20px;
+      box-sizing: border-box;
+      ul {
+        li {
+          display: flex;
+          padding: 6px 14px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+}

@@ -23,12 +23,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  width: 200px;
-  height: 80px;
-  background-color: $accent;
+  .logo {
+    width: 200px;
+    height: 80px;
+    background-color: $accent;
+  }
 }
 
 .menu {
@@ -48,17 +47,27 @@ body {
   }
 }
 
-.input-wrapper input {
-  max-width: 700px;
-  width: 100%;
-  background-color: $black;
-  padding: 5px;
-  border-radius: 15px;
-  border: 2px solid $accent;
-  color: $white;
-  font-size: 16px;
-  height: 30px;
-  padding-left: 10px;
+.input-wrapper {
+  position: relative;
+  input {
+    max-width: 700px;
+    background-color: $black;
+    border-radius: 15px;
+    border: 2px solid $accent;
+    color: $white;
+    font-size: 16px;
+    padding: 10px 0 10px 15px;
+    box-sizing: border-box;
+  }
+  .icon {
+    fill: none;
+    position: absolute;
+    top: 7px;
+    right: 14px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
 }
 
 .hero {
@@ -75,9 +84,21 @@ body {
 
 .searchbar {
   width: 700px;
-  .input-wrapper input{
-    height: 40px;
-    background-color: rgba(0,0,0,0.5);
+  font-weight: bold;
+  .input-wrapper {
+    input {
+      padding: 20px;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 25px;
+      font-size: 18px;
+    }
+    .icon {
+      top: 14px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+    }
   }
 }
 
@@ -91,10 +112,9 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-    justify-items: center;
+    grid-gap: 20px;
     .movie-card {
-      width: 160px;
-      height: 240px;
+      min-height: 260px;
       background: url("https://www.themoviedb.org/t/p/w220_and_h330_face/rqeYMLryjcawh2JeRpCVUDXYM5b.jpg");
       background-size: cover;
       .data {
@@ -125,18 +145,19 @@ body {
     font-weight: normal;
     font-size: 12px;
     max-width: 800px;
+    line-height: 1.2;
+    text-align: justify;
   }
-}
-
-.community .btn {
-  border: 2px solid #FFFFFF;
-  background-color: rgba(0,0,0,0);
-  color: white;
-  margin-top: 10px;
-  transition: all 0.2s linear 0.2s;
-  &:hover {
-    background-color: white;
-    color: $accent;
+  .btn {
+    border: 2px solid #FFFFFF;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    margin-top: 10px;
+    transition: all 0.2s linear 0.2s;
+    &:hover {
+      background-color: white;
+      color: $accent;
+    }
   }
 }
 
@@ -150,13 +171,11 @@ body {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     justify-content: center;
-    justify-items: center;
+    grid-gap: 10px;
     .mini-card {
-      width: 100px;
-      height: 150px;
+      width: 100%;
       img {
         width: 100%;
-        height: 100%;
       }
     }
   }
@@ -174,13 +193,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  justify-items: center;
+  grid-gap: 20px;
   .trailer-card {
-    width: 310px;
-    height: 180px;
+    width: 100%;
     img {
       width: 100%;
-      height: 100%;
     }
     h4 {
       font-family: Sen, sans-serif;
@@ -188,6 +205,20 @@ body {
       font-size: 14px;
       line-height: 17px;
       margin-top: 5px;
+      margin-left: 10px;
+    }
+    .trailer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/wu1uilmhM4TdluKi2ytfz8gidHf.jpg");
+      background-size: cover;
+      .playicon {
+        position: absolute;
+      }
     }
   }
 }
@@ -247,9 +278,9 @@ footer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-    justify-items: center;
+    grid-gap: 20px;
     .movie-card {
-      width: 180px;
+      width: 100%;
       height: 270px;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 0.5) 80.73%, #000000 100%), url("https://www.themoviedb.org/t/p/w220_and_h330_face/rqeYMLryjcawh2JeRpCVUDXYM5b.jpg");
       background-size: cover;
@@ -297,10 +328,10 @@ footer {
     grid-template-columns: repeat(7, 1fr);
     justify-content: center;
     justify-items: center;
-    row-gap: 18px;
+    grid-gap: 18px;
     .mini-card {
-      width: 120px;
-      height: 180px;
+      width: 100%;
+      height: 100%;
       img {
         width: 100%;
         height: 100%;
@@ -352,6 +383,7 @@ footer {
           z-index: 1;
           &.filteractive {
             display: block;
+            z-index: 2;
           }
           li {
             font-size: 10px;
@@ -370,6 +402,7 @@ footer {
   height: 0.5px;
   background-color: $light-gray;
   margin-bottom: 10px;
+  z-index: 1;
 }
 .moviedetailscontainer {
   display: flex;
@@ -604,3 +637,5 @@ footer {
     }
   }
 }
+
+@import 'lib/mobile.scss';

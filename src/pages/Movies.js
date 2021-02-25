@@ -34,7 +34,7 @@ export const Movies = () => {
                         <li>
                             <label> RATING </label>
                             <img src={arrow} alt=""/>
-                            <ul className="filteractive">
+                            <ul className="">
                                 <li>Highest</li>
                                 <li>Lowest</li>
                                 <li>TOP 250</li>
@@ -43,7 +43,7 @@ export const Movies = () => {
                         <li>
                             <label> POPULAR </label>
                             <img src={arrow} alt=""/>
-                            <ul className="filteractive">
+                            <ul className="">
                                 <li>All Time</li>
                                 <li>This Year</li>
                                 <li>This Month</li>
@@ -53,7 +53,7 @@ export const Movies = () => {
                         <li>
                             <label> GENRE </label>
                             <img src={arrow} alt=""/>
-                            <ul className="filteractive">
+                            <ul className="">
                                 <li>Action</li>
                                 <li>Adventure</li>
                                 <li>Animation</li>

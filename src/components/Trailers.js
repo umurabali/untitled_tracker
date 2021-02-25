@@ -1,9 +1,12 @@
 import React from "react";
+import {ReactComponent as Play} from '../lib/assets/images/play.svg';
 
 export const Trailers = () => {
     return (
         <div className="trailer-card">
-            <img src="https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/wu1uilmhM4TdluKi2ytfz8gidHf.jpg" alt=""/>
+            <div className="trailer">
+            <Play className="playicon"/>
+            </div>
             <h4>The SpongeBob Movie - Official Trailer</h4>
         </div>
     );
