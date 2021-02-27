@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Header} from "../components/Header";
 import {Footer} from "../components/Footer";
 import SearchBar from "../components/SearchBar";
@@ -6,9 +6,21 @@ import {MovieCard} from "../components/MovieCard";
 import {MiniCard} from "../components/MiniCard";
 import {Trailers} from "../components/Trailers";
 import {Button} from "../components/Button";
+import * as Constants from "../Constants";
+import {Popular} from "../components/Popular"
 
 export const Home = () => {
+
+    const [popularItems, setPopularItems] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${Constants.API_KEY}`)
+        .then(response => response.json())
+        .then(json => setPopularItems(json.results.slice(0,Constants.MAX_POPULAR_ITEM)))        
+    }, [])
+
     return (
+       
         <div className="Home">
             <Header/>
             <div className="hero">
@@ -17,14 +29,7 @@ export const Home = () => {
                 </div>
             </div>
             <div className="popular">
-                <h3>Whats Popular</h3>
-                <div className="moviecards">
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                </div>
+            <Popular popularItems={popularItems} />
             </div>
             <div className="community">
                 <div className="community-wrapper">

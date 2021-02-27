@@ -1,12 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Header} from "../components/Header";
 import {Footer} from "../components/Footer";
 import {MovieCard} from "../components/MovieCard";
 import {MiniCard} from "../components/MiniCard";
 import arrow from '../lib/assets/images/arrow.svg';
+import {Popular} from "../components/Popular"
+import * as Constants from "../Constants";
 
 
 export const Movies = () => {
+    const [popularItems, setPopularItems] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${Constants.API_KEY}`)
+        .then(response => response.json())
+        .then(json => setPopularItems(json.results.slice(0,5)))        
+    }, [])
+
     return (
         <div className="Movies">
             <Header/>
@@ -80,15 +90,7 @@ export const Movies = () => {
             </section>
 
             <div className="moviespopular">
-                <h3>POPULAR MOVIES THIS WEEK</h3>
-                <div className="line"></div>
-                <div className="moviecards">
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                    <MovieCard/>
-                </div>
+            <Popular popularItems={popularItems} />
             </div>
 
             <div className="alltimepopular">
